@@ -12,6 +12,7 @@
 
     <h1 id="versionText">Choose a Minecraft Version</h1>
 
+    <button class="rainbow-button" onclick="redirectToResent()">Resent Client 1.8.8</button>
     <button onclick="redirectTo188()">1.8.8</button>
     <button onclick="redirectTo152()">1.5.2</button>
 
@@ -28,6 +29,10 @@
 
         function redirectTo152() {
             window.location.href = "https://zubrus123.github.io/1.5.2/";
+        }
+
+        function redirectToResent() {
+            window.location.href = "https://radmanplays.github.io/resent-1.8.8/";
         }
 
         function activateSecret() {
@@ -54,7 +59,7 @@
 
         function replaceSkull() {
             // Replace the skull emoji with "hi"
-            document.getElementById('skullEmoji').innerHTML = 'FUCK YOU OLIX NIGGER';
+            document.getElementById('skullEmoji').innerHTML = 'F*** YOU OLIX N****R';
             // Remove the onclick event to prevent further interaction
             document.getElementById('skullEmoji').removeAttribute('onclick');
         }
