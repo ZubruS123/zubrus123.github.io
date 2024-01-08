@@ -1,0 +1,99 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #000; /* Initial background color (black) */
+    opacity: 0; /* Initial opacity set to 0 */
+    animation: fadeInAndMoveUp 4s forwards; /* Combined fadeIn, moveUp, and background color change animation */
+}
+
+#versionText {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #fff; /* White text color */
+    font-weight: bold; /* Bold text */
+}
+
+button {
+    font-size: 18px;
+    padding: 12px 24px;
+    margin: 10px;
+    background-color: #007bff; /* Blue button color */
+    color: #fff; /* White text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+button:hover {
+    transform: scale(1.1);
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+#secretButton {
+    font-size: 18px;
+    padding: 12px 24px;
+    margin: 10px;
+    background-color: rgba(255, 0, 0, 0.2); /* Semi-transparent red for the secret button */
+    color: #fff; /* White text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+#secretButton:hover {
+    transform: scale(1.1);
+    background-color: rgba(179, 0, 0, 0.2); /* Semi-transparent darker red on hover for the secret button */
+}
+
+#skullEmoji {
+    font-size: 300px; /* Adjust the font size as needed */
+    color: #fff; /* White color for the skull emoji */
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes fadeInAndMoveUp {
+    0% {
+        opacity: 0; /* Initial opacity set to 0 */
+        transform: translateY(50px); /* Initial position below */
+        background-color: #000; /* Initial background color (black) */
+    }
+    50% {
+        opacity: 1; /* Midway opacity set to 1 */
+        background-color: #404040; /* Midway background color (gray) */
+    }
+    100% {
+        opacity: 1; /* Final opacity set to 1 */
+        transform: translateY(0); /* Move up to the original position */
+        background-color: #808080; /* Final background color (gray) */
+    }
+}
+
+.activate-secret {
+    animation: fadeRedAndAppearSkull 4s forwards;
+}
+
+@keyframes fadeRedAndAppearSkull {
+    0% {
+        background-color: #808080; /* Initial background color (gray) */
+    }
+    50% {
+        background-color: red; /* Midway background color (red) */
+    }
+    100% {
+        background-color: red; /* Final background color (red) */
+        opacity: 1; /* Final opacity set to 1 */
+    }
+}

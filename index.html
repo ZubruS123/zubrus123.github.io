@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Version Selector</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <h1 id="versionText">Choose a Minecraft Version</h1>
+
+    <button onclick="redirectTo188()">1.8.8</button>
+    <button onclick="redirectTo152()">1.5.2</button>
+
+    <!-- Secret button initially hidden -->
+    <button id="secretButton" onclick="activateSecret()" style="display:none;">🤫 Secret</button>
+
+    <!-- Skull emoji initially hidden -->
+    <div id="skullEmoji" class="hidden" onclick="replaceSkull()">💀</div>
+
+    <script>
+        function redirectTo188() {
+            window.location.href = "https://zubrus123.github.io/1.8.8/";
+        }
+
+        function redirectTo152() {
+            window.location.href = "https://zubrus123.github.io/1.5.2/";
+        }
+
+        function activateSecret() {
+            // Hide buttons
+            document.querySelectorAll('button').forEach(button => {
+                button.style.display = 'none';
+            });
+
+            // Hide other elements
+            document.getElementById('versionText').style.display = 'none';
+            document.getElementById('secretButton').style.display = 'none';
+
+            // Display the massive skull emoji
+            document.getElementById('skullEmoji').classList.remove('hidden');
+
+            // Trigger background color change animation
+            document.body.classList.add('activate-secret');
+        }
+
+        // Function to reveal the secret button after a delay (e.g., 5 seconds)
+        setTimeout(function () {
+            document.getElementById('secretButton').style.display = 'inline-block';
+        }, 5000); // 5000 milliseconds = 5 seconds
+
+        function replaceSkull() {
+            // Replace the skull emoji with "hi"
+            document.getElementById('skullEmoji').innerHTML = 'FUCK YOU OLIX NIGGER';
+            // Remove the onclick event to prevent further interaction
+            document.getElementById('skullEmoji').removeAttribute('onclick');
+        }
+    </script>
+
+</body>
+
+</html>
