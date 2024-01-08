@@ -85,6 +85,41 @@ button:hover {
     animation: fadeRedAndAppearSkull 4s forwards;
 }
 
+.rainbow-button {
+    font-size: 18px;
+    padding: 12px 24px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    animation: rainbow 2s linear infinite;
+}
+
+@keyframes rainbow {
+    0% {
+        color: #ff0000; /* Red */
+    }
+    16.67% {
+        color: #ff8000; /* Orange */
+    }
+    33.33% {
+        color: #ffff00; /* Yellow */
+    }
+    50% {
+        color: #00ff00; /* Green */
+    }
+    66.67% {
+        color: #0000ff; /* Blue */
+    }
+    83.33% {
+        color: #8000ff; /* Indigo */
+    }
+    100% {
+        color: #ff00ff; /* Violet */
+    }
+}
+
+
 @keyframes fadeRedAndAppearSkull {
     0% {
         background-color: #808080; /* Initial background color (gray) */
